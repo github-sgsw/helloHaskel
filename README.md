@@ -1,7 +1,6 @@
-私はHaskell初心者です。
-プロジェクトルートにある、「プログラミングHaskell」のpdfで勉強しています。
+[プログラミングHaskell 第2版](https://www.lambdanote.com/products/haskell)
 
-## 出力条件
-- すべて日本語で出力してください
-- 問題を解くヒントや、文法の解説をメインとして、答えは求められたとき以外は出力しない
+```
+  cabal run xxx.hs
+```
 
