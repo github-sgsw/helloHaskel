@@ -51,6 +51,6 @@ executable helloHaskell
   import: shared-settings
   main-is: Main.hs
 
-executable chapter1-1
+executable Chapter1
   import: shared-settings
-  main-is: Chapter1-1.hs
+  main-is: Chapter1.hs
