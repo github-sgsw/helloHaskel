@@ -66,3 +66,7 @@ executable Chapter3
 executable Chapter4
   import: shared-settings
   main-is: Chapter4.hs
+
+executable Chapter5
+  import: shared-settings
+  main-is: Chapter5.hs
