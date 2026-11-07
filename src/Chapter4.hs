@@ -45,6 +45,3 @@ luhn :: Int -> Int -> Int -> Int -> Bool
 luhn a b c d
   | (luhnDouble a + b + luhnDouble c + d) `mod` 10 == 0 = True
   | otherwise = False
-
-main :: IO ()
-main = print $ luhn 1 7 8 4

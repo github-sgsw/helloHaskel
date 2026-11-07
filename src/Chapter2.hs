@@ -29,6 +29,3 @@ init1 xs = reverse $ drop 1 $ reverse xs
 
 init2 :: [xs] -> [xs]
 init2 xs = take (length xs - 1) xs
-
-main :: IO ()
-main = print $ myLast [2, 2, 3, 1, 1]

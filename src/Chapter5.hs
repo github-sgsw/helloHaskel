@@ -43,6 +43,3 @@ test7 = concat [[(x, y) | y <- [4, 5, 6]] | x <- [1, 2, 3]]
 
 -- 8
 -- 9
-
-main :: IO ()
-main = print $ perfects 500

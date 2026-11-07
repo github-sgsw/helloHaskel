@@ -1,3 +1,11 @@
+module Chapter1 (
+  mySum,
+  qsort,
+  seqn,
+  myDouble,
+  myProduct,
+) where
+
 -- 1.5.1 数値を足し合わせる
 mySum :: Num a => [a] -> a
 mySum [] = 0
@@ -35,6 +43,3 @@ myProduct (x : xs) = x * myProduct xs
 
 -- 5
 -- 重複している数字がソート後のリストから1つになるように削除される
-
-main :: IO ()
-main = print $ qsort [2, 2, 3, 1, 1]
