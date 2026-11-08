@@ -1,9 +1,10 @@
+# https://fourmolu.github.io/config/
 haddock-style: single-line
 indentation: 2
 comma-style: trailing
 record-style: knr
 import-grouping: single
-indent-wheres: false
+indent-wheres: true
 record-brace-space: true
 in-style: no-space
 if-style: hanging
@@ -12,5 +13,4 @@ single-deriving-parens: never
 sort-constraints: true
 sort-derived-classes: true
 sort-deriving-clauses: true
-unicode: never
 respectful: false

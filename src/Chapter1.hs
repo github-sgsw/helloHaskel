@@ -15,9 +15,9 @@ mySum (n : ns) = n + mySum ns
 qsort :: Ord a => [a] -> [a]
 qsort [] = []
 qsort (x : xs) = qsort smaller ++ [x] ++ qsort larger
- where
-  smaller = [a | a <- xs, a <= x]
-  larger = [b | b <- xs, b > x]
+  where
+    smaller = [a | a <- xs, a <= x]
+    larger = [b | b <- xs, b > x]
 
 -- 1.5.3 アクションを逐次に実行する
 seqn :: Monad m => [m a] -> m [a]
