@@ -1,4 +1,3 @@
--- test/Chapter1Spec.hs
 module Chapter1Spec (tests) where
 
 import Chapter1 (myDouble, myProduct, qsort)

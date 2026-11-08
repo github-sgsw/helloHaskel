@@ -3,7 +3,6 @@ module Main where
 import qualified Chapter1Spec
 import Test.Tasty
 
--- test/Main.hs
 main :: IO ()
 main = defaultMain tests
 
