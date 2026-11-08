@@ -8,10 +8,10 @@ tests :: TestTree
 tests =
   testGroup
     "Chapter 1 Tests"
-    [ testCase "qsort sorts a list correctly" $
+    [ testCase "降順ソート" $
         qsort [2, 2, 3, 1, 1] @?= [1, 1, 2, 2, 3],
-      testCase "myDouble doubles a number" $
+      testCase "与えられた数値の2倍" $
         myDouble 4 @?= 8,
-      testCase "myProduct multiplies all elements" $
+      testCase "与えられたリスト内の数値の積" $
         myProduct [1, 2, 3, 4] @?= 24
     ]
