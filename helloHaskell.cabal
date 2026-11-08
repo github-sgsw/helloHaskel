@@ -19,6 +19,7 @@ library
   hs-source-dirs: src
   exposed-modules:
     Chapter1
+    Chapter2
 
 test-suite helloHaskell-Tests
   import: shared-settings
@@ -27,6 +28,7 @@ test-suite helloHaskell-Tests
   hs-source-dirs: test
   other-modules:
     Chapter1Spec
+    Chapter2Spec
 
   build-depends:
     helloHaskell,

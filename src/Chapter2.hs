@@ -1,3 +1,9 @@
+module Chapter2 (
+  myLast,
+  init1,
+  init2,
+) where
+
 double x = x + x
 
 quadruple x = double (double x)
@@ -13,11 +19,11 @@ average ns = sum ns `div` length ns
 -- 2 + (3 * (4 ^ 5))
 
 -- 3
-n2 :: Int
-n2 = a `div` length xs
- where
-  a = 10
-  xs = [1, 2, 3, 4, 5]
+test3 :: Int
+test3 = a `div` length xs
+  where
+    a = 10
+    xs = [1, 2, 3, 4, 5]
 
 -- 4
 myLast :: [x] -> x
