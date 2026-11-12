@@ -11,7 +11,9 @@ tests =
     [ testGroup
         "2. sumdown"
         [ testCase "与えられた非負の整数から0までを足し合わせる" $
-            sumdown 3 @?= 6
+            sumdown 3 @?= 6,
+          testCase "0の場合（終了条件の確認）" $
+            sumdown 0 @?= 0
         ],
       testGroup
         "4. euclid"
