@@ -1,3 +1,13 @@
+module Chapter5 (
+  test1,
+  grid,
+  square,
+  myReplicate,
+  pyths,
+  perfects,
+  test7,
+) where
+
 -- 5.2 ガード
 factors :: Int -> [Int]
 factors n = [x | x <- [1 .. n], n `mod` x == 0]
@@ -13,9 +23,9 @@ positions :: Eq a => a -> [a] -> [Int]
 positions x xs = [i | (x', i) <- zip xs [0 ..], x == x']
 
 -- 5.7 練習問題
--- 1
-test1 :: Int
-test1 = sum [num ^ 2 | num <- [1 .. 100]]
+-- 1 (テストがしやすいように与えられた値までの和に改変)
+test1 :: Int -> Int
+test1 n = sum [num ^ 2 | num <- [1 .. n]]
 
 -- 2
 grid :: Int -> Int -> [(Int, Int)]
@@ -43,3 +53,4 @@ test7 = concat [[(x, y) | y <- [4, 5, 6]] | x <- [1, 2, 3]]
 
 -- 8
 -- 9
+-- 10

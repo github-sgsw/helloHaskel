@@ -3,6 +3,7 @@ module Main where
 import qualified Chapter1Spec
 import qualified Chapter2Spec
 import qualified Chapter4Spec
+import qualified Chapter5Spec
 import Test.Tasty
 
 main :: IO ()
@@ -14,5 +15,6 @@ tests =
     "All Chapters Tests"
     [ Chapter1Spec.tests,
       Chapter2Spec.tests,
-      Chapter4Spec.tests
+      Chapter4Spec.tests,
+      Chapter5Spec.tests
     ]
