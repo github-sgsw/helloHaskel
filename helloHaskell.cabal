@@ -8,7 +8,7 @@ extra-doc-files: CHANGELOG.md
 
 common shared-settings
   ghc-options:
-    "-Wall,"
+    -Wall
     -Wno-type-defaults
 
   build-depends: base ^>=4.22.0.0
