@@ -17,15 +17,17 @@ sumdown n = n + sumdown (n - 1)
 -- 4
 euclid :: Int -> Int -> Int
 euclid x y
+  | y == 0 = x
   | x > y = euclid (x - y) y
   | y > x = euclid (y - x) x
-  | x == y = x
+  | otherwise = x
 
 -- 5
 
 -- 6
 myAnd :: [Bool] -> Bool
-myAnd = undefined
+myAnd [] = True
+myAnd (b : bs) = if b then myAnd bs else b
 
 myConcat :: [[a]] -> [a]
 myConcat = undefined
