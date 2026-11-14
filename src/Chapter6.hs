@@ -4,6 +4,7 @@ module Chapter6 (
   myAnd,
   myConcat,
   myReplicate,
+  (!!!),
 ) where
 
 -- 6.8 練習問題
@@ -37,3 +38,7 @@ myReplicate :: Int -> a -> [a]
 myReplicate n a
   | n > 0 = a : myReplicate (n - 1) a
   | otherwise = []
+
+(!!!) :: [a] -> Int -> a
+(!!!) (x : _) 0 = x
+(!!!) (_ : xs) n = xs !!! (n - 1)

@@ -52,6 +52,11 @@ tests =
                 myReplicate 0 True @?= [],
               testCase "負数の指定" $
                 myReplicate (-1) True @?= []
+            ],
+          testGroup
+            "6-d. (!!) 空でないリストのn番目の要素を取り出す"
+            [ testCase "正常系" $
+                ([1, 2, 3] !!! 2) @?= 3
             ]
         ]
     ]
