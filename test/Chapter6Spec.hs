@@ -47,7 +47,11 @@ tests =
           testGroup
             "6-c. replicate 指定された要素をn個持つリストを生成"
             [ testCase "正常系" $
-                myReplicate 3 True @?= [True, True, True]
+                myReplicate 3 True @?= [True, True, True],
+              testCase "指定された要素が0" $
+                myReplicate 0 True @?= [],
+              testCase "負数の指定" $
+                myReplicate (-1) True @?= []
             ]
         ]
     ]
