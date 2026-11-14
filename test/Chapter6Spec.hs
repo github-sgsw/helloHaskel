@@ -57,6 +57,19 @@ tests =
             "6-d. (!!) 空でないリストのn番目の要素を取り出す"
             [ testCase "正常系" $
                 ([1, 2, 3] !!! 2) @?= 3
+            ],
+          testGroup
+            "6-e. myElem リストの要素に含まれるか検査する関数"
+            [ testCase "Int 含まれている" $
+                myElem 3 [1, 2, 3] @?= True,
+              testCase "Int 含まれていない" $
+                myElem 4 [1, 2, 3] @?= False,
+              testCase "空配列" $
+                myElem True [] @?= False,
+              testCase "Char 含まれている" $
+                myElem 'c' "haskell" @?= False,
+              testCase "Char 含まれていない" $
+                myElem 'e' "haskell" @?= True
             ]
         ]
     ]
