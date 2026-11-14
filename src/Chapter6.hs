@@ -30,7 +30,8 @@ myAnd [] = True
 myAnd (b : bs) = if b then myAnd bs else b
 
 myConcat :: [[a]] -> [a]
-myConcat = undefined
+myConcat [] = []
+myConcat (x : xs) = x ++ myConcat xs
 
 myReplicate :: Int -> a -> [a]
 myReplicate = undefined
