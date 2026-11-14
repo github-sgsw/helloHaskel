@@ -34,4 +34,6 @@ myConcat [] = []
 myConcat (x : xs) = x ++ myConcat xs
 
 myReplicate :: Int -> a -> [a]
-myReplicate = undefined
+myReplicate n a
+  | n > 0 = a : myReplicate (n - 1) a
+  | otherwise = []
