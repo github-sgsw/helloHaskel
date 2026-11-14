@@ -6,6 +6,7 @@ module Chapter6 (
   myReplicate,
   (!!!),
   myElem,
+  merge,
 ) where
 
 -- 6.8 練習問題
@@ -54,3 +55,11 @@ myElem _ [] = False
 myElem a (x : xs)
   | a == x = True
   | otherwise = myElem a xs
+
+-- 6.8.7
+merge :: Ord a => [a] -> [a] -> [a]
+merge xs [] = xs
+merge [] xs = xs
+merge (x : xs) (y : ys)
+  | x <= y = x : merge xs (y : ys)
+  | otherwise = y : merge (x : xs) ys
