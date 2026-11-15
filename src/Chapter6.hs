@@ -7,7 +7,10 @@ module Chapter6 (
   (!!!),
   myElem,
   merge,
+  msort,
 ) where
+
+import Chapter4 (halve)
 
 -- 6.8 練習問題
 -- 6.8.1
@@ -63,3 +66,14 @@ merge [] xs = xs
 merge (x : xs) (y : ys)
   | x <= y = x : merge xs (y : ys)
   | otherwise = y : merge (x : xs) ys
+
+-- 6.8.8
+msort :: Ord a => [a] -> [a]
+msort [] = []
+msort [a] = [a]
+msort as = sorted
+  where
+    (xs, ys) = halve as
+    sorted = merge (msort xs) (msort ys)
+
+-- 6.8.9
