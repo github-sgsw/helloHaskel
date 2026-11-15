@@ -57,5 +57,12 @@ tests =
         [ testCase "正常系" $ merge [2, 5, 6] [1, 3, 4] @?= [1, 2, 3, 4, 5, 6],
           testCase "空配列 1" $ merge [] [5, 6, 7] @?= [5, 6, 7],
           testCase "空配列 2" $ merge [8, 9, 10] [] @?= [8, 9, 10]
+        ],
+      testGroup
+        "6.8.8 msort マージソート"
+        [ testCase "要素数が偶数" $ msort [2, 5, 3, 1, 6, 4] @?= [1, 2, 3, 4, 5, 6],
+          testCase "要素数が奇数" $ msort [10, 8, 11, 12, 9] @?= [8, 9, 10, 11, 12],
+          testCase "要素数１つ" $ msort [1] @?= [1],
+          testCase "空配列" $ msort ([] :: [Int]) @?= []
         ]
     ]
