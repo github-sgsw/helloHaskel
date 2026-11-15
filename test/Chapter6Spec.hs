@@ -24,14 +24,14 @@ tests =
             "6.8.6-a and リストの要素が全てTrueか検査"
             [ testCase "正常系" $ myAnd [True, True, True] @?= True,
               testCase "Falseが含まれる場合" $ myAnd [False, True, True] @?= False,
-              testCase "空配列" $ myAnd [] @?= True
+              testCase "空リスト" $ myAnd [] @?= True
             ],
           testGroup
             "6.8.6-b concat リストのリストを取り、要素であるリストを連結する関数"
             [ testCase "正常系" $ myConcat [[1, 2, 3], [4, 5, 6]] @?= [1, 2, 3, 4, 5, 6],
-              testCase "空配列" $ myConcat ([] :: [[Int]]) @?= [],
+              testCase "空リスト" $ myConcat ([] :: [[Int]]) @?= [],
               testCase "要素数が違う" $ myConcat [[1, 2, 3], [4, 5, 6, 7]] @?= [1, 2, 3, 4, 5, 6, 7],
-              testCase "途中に空配列" $ myConcat [[], [1, 2], [], [3], [4, 5]] @?= [1, 2, 3, 4, 5]
+              testCase "途中に空リスト" $ myConcat [[], [1, 2], [], [3], [4, 5]] @?= [1, 2, 3, 4, 5]
             ],
           testGroup
             "6.8.6-c replicate 指定された要素をn個持つリストを生成"
@@ -47,7 +47,7 @@ tests =
             "6.8.6-e myElem リストの要素に含まれるか検査する関数"
             [ testCase "Int 含まれている" $ myElem 3 [1, 2, 3] @?= True,
               testCase "Int 含まれていない" $ myElem 4 [1, 2, 3] @?= False,
-              testCase "空配列" $ myElem True [] @?= False,
+              testCase "空リスト" $ myElem True [] @?= False,
               testCase "Char 含まれている" $ myElem 'c' "haskell" @?= False,
               testCase "Char 含まれていない" $ myElem 'e' "haskell" @?= True
             ]
@@ -55,14 +55,14 @@ tests =
       testGroup
         "6.8.7 merge 整列されたリストを2つ取り、1つの整列されたリストにして返す"
         [ testCase "正常系" $ merge [2, 5, 6] [1, 3, 4] @?= [1, 2, 3, 4, 5, 6],
-          testCase "空配列 1" $ merge [] [5, 6, 7] @?= [5, 6, 7],
-          testCase "空配列 2" $ merge [8, 9, 10] [] @?= [8, 9, 10]
+          testCase "空リスト 1" $ merge [] [5, 6, 7] @?= [5, 6, 7],
+          testCase "空リスト 2" $ merge [8, 9, 10] [] @?= [8, 9, 10]
         ],
       testGroup
         "6.8.8 msort マージソート"
         [ testCase "要素数が偶数" $ msort [2, 5, 3, 1, 6, 4] @?= [1, 2, 3, 4, 5, 6],
           testCase "要素数が奇数" $ msort [10, 8, 11, 12, 9] @?= [8, 9, 10, 11, 12],
           testCase "要素数１つ" $ msort [1] @?= [1],
-          testCase "空配列" $ msort ([] :: [Int]) @?= []
+          testCase "空リスト" $ msort ([] :: [Int]) @?= []
         ]
     ]

@@ -5,6 +5,7 @@ import qualified Chapter2Spec
 import qualified Chapter4Spec
 import qualified Chapter5Spec
 import qualified Chapter6Spec
+import qualified Chapter7Spec
 import Test.Tasty
 
 main :: IO ()
@@ -18,5 +19,6 @@ tests =
       Chapter2Spec.tests,
       Chapter4Spec.tests,
       Chapter5Spec.tests,
-      Chapter6Spec.tests
+      Chapter6Spec.tests,
+      Chapter7Spec.tests
     ]
