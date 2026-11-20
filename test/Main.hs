@@ -1,5 +1,6 @@
 module Main where
 
+import qualified Chapter12Spec
 import qualified Chapter1Spec
 import qualified Chapter2Spec
 import qualified Chapter4Spec
@@ -20,5 +21,6 @@ tests =
       Chapter4Spec.tests,
       Chapter5Spec.tests,
       Chapter6Spec.tests,
-      Chapter7Spec.tests
+      Chapter7Spec.tests,
+      Chapter12Spec.tests
     ]

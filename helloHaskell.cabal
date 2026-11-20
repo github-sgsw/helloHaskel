@@ -11,7 +11,10 @@ common shared-settings
     -Wall
     -Wno-type-defaults
 
-  build-depends: base ^>=4.22.0.0
+  build-depends:
+    base ^>=4.22.0.0,
+    mtl,
+
   default-language: GHC2024
 
 library
@@ -19,6 +22,7 @@ library
   hs-source-dirs: src
   exposed-modules:
     Chapter1
+    Chapter12
     Chapter2
     Chapter4
     Chapter5
@@ -31,6 +35,7 @@ test-suite helloHaskell-Tests
   main-is: Main.hs
   hs-source-dirs: test
   other-modules:
+    Chapter12Spec
     Chapter1Spec
     Chapter2Spec
     Chapter4Spec
